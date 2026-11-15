@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradeIngestion.Domain\TradeIngestion.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Abstractions only: the application layer stays free of EF Core / SQL Server. -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="TradeIngestion.Tests" />
+  </ItemGroup>
+
+</Project>

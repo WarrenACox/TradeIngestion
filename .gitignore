@@ -1,0 +1,26 @@
+## .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userprefs
+
+## IDEs
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+
+## Test output
+TestResults/
+coverage*/
+*.trx
+
+## Local secrets / overrides
+appsettings.*.local.json
+.env
+
+## Not published
+docs/VideoScript.md
