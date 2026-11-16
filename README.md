@@ -5,7 +5,9 @@ new versions, stale events ignored, full audit history kept) and produces **poin
 USD using average cost. A set-based stored procedure, `dbo.GetPortfolioSnapshot`, produces the same numbers from SQL,
 and an integration test checks that it agrees with the API.
 
-Design rationale, trade-offs and production considerations are in **[SOLUTION.md](SOLUTION.md)**.
+Design rationale, trade-offs and production considerations are in **[SOLUTION.md](SOLUTION.md)**. A shorter walkthrough
+of what was built, how the code works and the architecture trade-offs is in
+**[docs/BUILD_AND_TRADEOFFS.md](docs/BUILD_AND_TRADEOFFS.md)**.
 
 ```
 TradeIngestion/
@@ -21,6 +23,7 @@ TradeIngestion/
 │   ├── Indexes.sql                     DBA reference copy of all supporting indexes (idempotent)
 │   └── ResetDemoData.sql               Demo/dev only: clears ACC-001 trades so the demo is repeatable
 ├── scripts/Demo.ps1                    Runs and asserts the four assessment scenarios
+├── docs/BUILD_AND_TRADEOFFS.md         What was built, code walkthrough, architecture trade-offs
 ├── docs/AI_USAGE.md                    How AI assistance was used
 ├── docker-compose.yml                  Local SQL Server 2022
 └── TradeIngestion.sln
